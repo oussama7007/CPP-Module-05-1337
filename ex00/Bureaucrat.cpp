@@ -4,7 +4,5 @@
 
 
 
-Bureaucrat::Bureaucrat(const std::string str)
-{
-    
-}
+Bureaucrat::Bureaucrat(const std::string &str): name(str) {}
+
