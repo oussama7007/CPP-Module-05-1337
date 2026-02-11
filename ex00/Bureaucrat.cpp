@@ -13,3 +13,11 @@ Bureaucrat::Bureaucrat(const Bureaucrat &other)
     this->grade = other.grade;
     this->name = other.name;
 }
+
+Bureaucrat & operator=(const Bureaucrat &other)
+{
+    if(this !=&other )
+    {
+        
+    }
+}
