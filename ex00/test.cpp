@@ -1,22 +1,34 @@
 
 
 
+// #include <iostream>
+// #include <stdexcept>
+
+// void    checkage(int age)
+// {
+//     if(age < 0 || age > 150)
+//         throw std::runtime_error("----------the age is invalid--------------");
+//     else 
+//         std::cout << "the age is valid\n";
+    
+// }
+
+
+// int main()
+// {
+//     try{
+//         checkage(-4);
+
+//     }
+//     catch(std::exception &e )
+//     {
+//         std::cout << e.what() << std::endl;
+//     }
+//     return 0;
+// }
+
 #include <iostream>
 #include <stdexcept>
 
-int divide(int a, int b) {
-    if (b == 0)
-        throw std::runtime_error("Cannot divide by zero!");
-    return a / b;
-}
 
-int main() {
-    try {
-        int result = divide(10, 9);  // this will throw
-        std::cout << result << std::endl;  // this line never runs
-    }
-    catch (std::exception &e) {
-        std::cout << "Caught: " << e.what() << std::endl;
-    }
-    return 0;
-}
+int     parseInput(int n)
