@@ -76,24 +76,29 @@ Hint: rethrowing uses just throw; with no argument inside a catch block.
 */
 
 
-void    inner()
+void inner()
 {
-    throw ;
+    // YOU throw something here first
+    throw std::runtime_error("something went wrong");
 }
 
-void    outer()
+void outer()
 {
-    inner();
+    try {
+        inner();  // inner throws, outer catches it...
+    }
+    catch (std::exception &e) {
+        std::cout << "outer caught it, rethrowing...\n";
+        //throw;  // ...then passes it along with throw;
+    }
 }
 
 int main()
 {
-    try{
-        outer();
+    try {
+        outer();  // outer rethrows, main catches it finally
     }
-    catch(std::exception &t)
-    {
-        std::cout << t.what() << "error" << std::endl;
+    catch (std::exception &e) {
+        std::cout << "main caught: " << e.what() << std::endl;
     }
 }
-
