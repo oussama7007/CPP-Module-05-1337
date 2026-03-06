@@ -15,7 +15,7 @@ class Bureaucrat
         Bureaucrat(const Bureaucrat &other);
         Bureaucrat & operator=(const Bureaucrat &other);
 
-        class Bureaucreat
+     
 
         
 };
