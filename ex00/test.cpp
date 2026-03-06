@@ -31,4 +31,69 @@
 #include <stdexcept>
 
 
-int     parseInput(int n)
+
+/*
+Exercise 2 — multiple catch blocks
+Write a function parseInput(int n) that:
+
+throws an std::runtime_error if n is negative
+throws an std::invalid_argument if n is zero
+returns n * 2 otherwise
+
+Catch each exception separately and print a different message for each.
+*/
+// int     parseInput(int n)
+// {
+//     if(n <0 )
+//         throw std::runtime_error("the number is negative");
+//     else if(n == 0)
+//         throw std::invalid_argument("the number is zero");
+//     return n*2;
+// }
+
+// int main()
+// {
+//     try
+//     {
+//         int result = parseInput(0);
+
+//         std::cout << "the result is " << result << std::endl;
+//     }
+//     catch(std::exception &t)
+//     {
+//         std::cout << t.what() << std::endl;
+//     }
+
+// }
+
+
+
+/*
+Exercise 3 — rethrowing
+This one is trickier. Write a function inner() that throws, and a function outer() that calls inner() inside a try/catch — but instead of handling it, rethrows the exception using just throw;. Then catch it in main.
+inner() → throws → outer() catches and rethrows → main() catches
+Hint: rethrowing uses just throw; with no argument inside a catch block.
+*/
+
+
+void    inner()
+{
+    throw ;
+}
+
+void    outer()
+{
+    inner();
+}
+
+int main()
+{
+    try{
+        outer();
+    }
+    catch(std::exception &t)
+    {
+        std::cout << t.what() << "error" << std::endl;
+    }
+}
+
