@@ -8,7 +8,7 @@
 class Form
 {
     private:
-        const std::string str;
+        const std::string name;
         bool sign;
         const int grade_sign;
         const int grade_execute;
@@ -30,11 +30,13 @@ class Form
             public:
                 const char *what() const throw();
         };
+        
         std::string     getName() const;
-        int             getGrade() const;
-        void            increment() ;
-        void            decrement() ;
-        void            beSigned(const Bureaucrat &obj)
+        int             getGrade_sign() const;
+        int             getGrade_execute() const;
+        bool            getSign() const;
+
+        void            beSigned(const Bureaucrat &obj);
 };
 
 std::ostream    &operator<<(std::ostream &out,const Form &obj);
