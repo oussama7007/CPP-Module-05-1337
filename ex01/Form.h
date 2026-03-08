@@ -3,10 +3,11 @@
 #pragma once
 
 #include <iostream>
+
 #include "Bureaucrat.h"
 
 class Bureaucrat;
- 
+
 class Form
 {
     private:
@@ -40,6 +41,4 @@ class Form
 
         void            beSigned(const Bureaucrat &obj);
 };
-
 std::ostream    &operator<<(std::ostream &out,const Form &obj);
-
