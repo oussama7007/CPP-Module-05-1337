@@ -3,9 +3,16 @@
 
 Name = Form
 
-src = main.cpp Bureaucrat.cpp Form.cpp
+SRC = Bureaucrat.cpp \
+      AForm.cpp \
+      PresidentialPardonForm.cpp \
+      RobotomyRequestForm.cpp \
+      ShrubberyCreationForm.cpp \
+
 
 obj = ${src:.cpp=.o}
+
+inc = Bureaucrat.h AForm.h ShrubberyCreationForm.h RobotomyRequestForm.h PresidentialPardonForm.h
 
 cpp = c++ -Wall -Werror -Wextra -std=c++98
 
@@ -14,7 +21,7 @@ all : ${Name}
 ${Name} : ${obj}
 	${cpp} ${obj} -o $@
 
-%.o:%.cpp Bureaucrat.h Form.h
+%.o:%.cpp ${inc}
 	${cpp}  -c $< -o $@
 
 clean :
