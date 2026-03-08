@@ -34,14 +34,14 @@ Form::~Form() {}
 
 const char *Form::GradeTooHighException::what() const throw()
 {
-    return " Form GradeTooHighException ";
+    return " Form: Grade Too High Exception ";
 }
 
 
 
 const char *Form::GradeTooLowException::what() const throw()
 {
-    return " Form GradeTooLowException ";
+    return " Form: Grade Too Low Exception ";
 }
 
 
