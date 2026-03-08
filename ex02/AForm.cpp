@@ -1,0 +1,94 @@
+
+
+
+
+#include "Form.h"
+
+Form::Form() : name("default"), sign(false), grade_sign(1),  grade_execute(1){}
+
+Form::Form(const std::string str,
+    bool sign, const int grade_sign, const int grade_execute): name(str), sign(sign), 
+    grade_sign(grade_sign), grade_execute(grade_execute)
+{
+    if(grade_execute < 1 || grade_sign < 1 )
+        throw Form::GradeTooHighException();
+    else if(grade_sign > 150 || grade_execute > 150)
+        throw Form::GradeTooLowException();
+}
+
+Form::Form(const Form &other) : name(other.name), sign(other.sign), grade_sign(other.grade_sign),
+                grade_execute(other.grade_execute)
+{}
+
+
+Form & Form::operator=(const Form &other)
+{
+    if(this != &other)
+    {
+        this->sign = other.sign;
+    }
+    return *this;
+}
+
+Form::~Form() {}
+
+const char *Form::GradeTooHighException::what() const throw()
+{
+    return " Form: Grade Too High Exception ";
+}
+
+
+
+const char *Form::GradeTooLowException::what() const throw()
+{
+    return " Form: Grade Too Low Exception ";
+}
+
+
+
+std::string     Form::getName() const
+{
+    return this->name;
+}
+
+
+
+int      Form::getGrade_execute() const 
+{
+        return this->grade_execute;
+}
+
+
+
+int     Form::getGrade_sign() const 
+{
+    return this->grade_sign;
+}
+
+
+
+bool    Form::getSign() const
+{
+        return this->sign;
+}
+
+
+
+void        Form::beSigned(const Bureaucrat &obj)
+{
+    if(obj.getGrade() <= this->grade_sign)
+        this->sign = true;
+    else 
+        throw Form::GradeTooLowException();
+    
+}
+
+
+
+std::ostream    &operator<<(std::ostream &out,const Form &obj)
+{
+    out << "Form name: " <<obj.getName() << "\nForm grade required to sign it :" << obj.getGrade_sign() 
+        << "\nand the grade required to execute :" << obj.getGrade_execute() << 
+        "\nand the boolean indicating whether it is signed :" << obj.getSign() << std::endl;
+    return out;
+}
