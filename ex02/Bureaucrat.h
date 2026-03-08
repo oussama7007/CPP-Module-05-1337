@@ -1,9 +1,9 @@
 #pragma once 
 
 #include <iostream>
-#include "Form.h"
+#include "AForm.h"
 
-class Form;
+class AForm;
 
 class Bureaucrat
 {
@@ -26,10 +26,9 @@ class Bureaucrat
         };
         std::string     getName() const;
         int     getGrade()  const ;
-        void    increment();    // Remember, since grade 1 is the highest and 150 the lowest,
-                                //incrementing a grade 3 should result in a grade 2 for the bureaucrat.
+        void    increment();   
         void    decrement();
-        void    signForm(Form &obj) const;
+        void    signForm(AForm &obj) const;
 };
 
 std::ostream& operator<<(std::ostream &out , const Bureaucrat& obj);
