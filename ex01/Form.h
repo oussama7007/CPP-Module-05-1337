@@ -5,6 +5,8 @@
 #include <iostream>
 #include "Bureaucrat.h"
 
+class Bureaucrat;
+
 class Form
 {
     private:

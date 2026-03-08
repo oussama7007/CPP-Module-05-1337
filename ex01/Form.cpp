@@ -4,7 +4,7 @@
 
 #include "Form.h"
 
-Form::Form() : name("default"), sign(false), grade_execute(0), grade_sign(0){}
+Form::Form() : name("default"), sign(false), grade_sign(1),  grade_execute(1){}
 
 Form::Form(const std::string str,
     bool sign, const int grade_sign, const int grade_execute): name(str), sign(sign), 
@@ -20,6 +20,7 @@ Form::Form(const Form &other) : name(other.name), sign(other.sign), grade_sign(o
                 grade_execute(other.grade_execute)
 {}
 
+
 Form & Form::operator=(const Form &other)
 {
     if(this != &other)
@@ -28,13 +29,15 @@ Form & Form::operator=(const Form &other)
     }
     return *this;
 }
-Form::~Form() {}
 
+Form::~Form() {}
 
 const char *Form::GradeTooHighException::what() const throw()
 {
     return " Form GradeTooHighException ";
 }
+
+
 
 const char *Form::GradeTooLowException::what() const throw()
 {
@@ -42,31 +45,50 @@ const char *Form::GradeTooLowException::what() const throw()
 }
 
 
+
 std::string     Form::getName() const
 {
     return this->name;
 }
+
+
+
 int      Form::getGrade_execute() const 
 {
         return this->grade_execute;
 }
+
+
+
 int     Form::getGrade_sign() const 
 {
     return this->grade_sign;
 }
+
+
+
 bool    Form::getSign() const
 {
         return this->sign;
 }
 
+
+
 void        Form::beSigned(const Bureaucrat &obj)
 {
+    if(obj.getGrade() <= this->grade_sign)
+        this->sign = true;
+    else 
+        throw Form::GradeTooLowException();
     
 }
 
+
+
 std::ostream    &operator<<(std::ostream &out,const Form &obj)
 {
-    out << obj.getName() << ", Form grade required to sign it " << obj.getGrade_sign() 
-        << ", and the grade required to execute " << obj.getGrade_execute() << 
-        ", and the boolean indicating whether it is signed " << obj.getSign() << std::endl;
+    out << "Form name: " <<obj.getName() << "\nForm grade required to sign it :" << obj.getGrade_sign() 
+        << "\nand the grade required to execute :" << obj.getGrade_execute() << 
+        "\nand the boolean indicating whether it is signed :" << obj.getSign() << std::endl;
+    return out;
 }
