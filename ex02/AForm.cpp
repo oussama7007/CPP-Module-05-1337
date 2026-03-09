@@ -16,7 +16,7 @@ AForm::AForm(const std::string str,
         throw AForm::GradeTooLowException();
 }
 
-AForm::AForm(const Form &other) : name(other.name), sign(other.sign), grade_sign(other.grade_sign),
+AForm::AForm(const AForm &other) : name(other.name), sign(other.sign), grade_sign(other.grade_sign),
                 grade_execute(other.grade_execute)
 {}
 

@@ -33,6 +33,11 @@ class AForm
             public:
                 const char *what() const throw();
         };
+        class FormNotSignedException : public std::exception
+        {
+            public:
+                const char *what() const throw();
+        };
 
         std::string     getName() const;
         int             getGrade_sign() const;
