@@ -10,6 +10,7 @@ class PresidentialPardonForm : public AForm
     private:
         std::string target;
     public:
+    
         PresidentialPardonForm();
         PresidentialPardonForm(std::string &str);
         PresidentialPardonForm(const PresidentialPardonForm &obj);
