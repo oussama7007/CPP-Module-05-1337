@@ -42,5 +42,10 @@ void    ShrubberyCreationForm::execute(const Bureaucrat & execute) const
         else
         {
             std::ofstream my_file(this->target+"_shrubbery");
+            my_file << "   /\\\n";
+            my_file << "  /**\\\n";
+            my_file << " /****\\\n";
+            my_file << "/******\\\n";
+            my_file << "   ||\n";
         }
 }
