@@ -4,17 +4,16 @@
 #include "PresidentialPardonForm.h"
 
 
-PresidentialPardonForm::PresidentialPardonForm() : AForm(), target("default")
+PresidentialPardonForm::PresidentialPardonForm() : AForm("PresidentialPardonForm", false, 25,5), target("default")
 {}
 
 
-PresidentialPardonForm::PresidentialPardonForm(std::string &str) : AForm(str, false, 145, 137),  target(str)
+PresidentialPardonForm::PresidentialPardonForm(const std::string &str) : AForm("PresidentialPardonForm", false, 25, 5),  target(str)
 {}
 
 
-PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &obj) : AForm(obj)
+PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &obj) : AForm(obj), target(obj.target)
 {
-    this->target = obj.target;
 }
 
 
@@ -34,8 +33,12 @@ PresidentialPardonForm::~PresidentialPardonForm()
 
 void    PresidentialPardonForm::execute(const Bureaucrat & executor)
 {
-            if(this->getSign() && executor.getGrade() < this->getGrade_execute())
+            if(!this->getSign())
+               throw PresidentialPardonForm::FormNotSignedException();
+            else if(executor.getGrade() > this->getGrade_execute())
+                throw PresidentialPardonForm::GradeTooLowException();
+            else 
                 std::cout << this->target << " has been pardoned by Zaphod Beeblebrox." << std::endl;
-            else    
-                throw 
+                
 }
+

@@ -1,7 +1,5 @@
 
 
-
-
 #include "AForm.h"
 
 AForm::AForm() : name("default"), sign(false), grade_sign(1),  grade_execute(1){}
@@ -72,7 +70,10 @@ bool    AForm::getSign() const
         return this->sign;
 }
 
-
+const char *        AForm::FormNotSignedException::what() const throw()
+{
+    return "Form Not Signed Exception";
+}
 
 void        AForm::beSigned(const Bureaucrat &obj)
 {
