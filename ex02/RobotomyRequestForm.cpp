@@ -41,6 +41,6 @@ void    RobotomyRequestForm::execute(Bureaucrat const & executor) const
             else if(executor.getGrade() > this->getGrade_execute())
                 throw RobotomyRequestForm::GradeTooLowException();
             else 
-                std::cout << this->target << " has been pardoned by Zaphod Beeblebrox." << std::endl;
+                // std::cout << this->target << " has been pardoned by Zaphod Beeblebrox." << std::endl;
     
 }

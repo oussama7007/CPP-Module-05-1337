@@ -31,7 +31,7 @@ PresidentialPardonForm::~PresidentialPardonForm()
 {}
 
 
-void    PresidentialPardonForm::execute(const Bureaucrat & executor)
+void    PresidentialPardonForm::execute(const Bureaucrat & executor) const 
 {
             if(!this->getSign())
                throw PresidentialPardonForm::FormNotSignedException();
