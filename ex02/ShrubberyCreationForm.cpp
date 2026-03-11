@@ -33,12 +33,12 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 {}
 
 
-void    ShrubberyCreationForm::execute(const Bureaucrat & execute) const
+void    ShrubberyCreationForm::execute(const Bureaucrat & execute) 
 {
         if(!this->getSign())
             throw ShrubberyCreationForm::FormNotSignedException();
-        else if (execute.getGrade() < this->getGrade_execute())
-            throw ShrubberyCreationForm::GradeTooHighException();
+        else if (execute.getGrade() > this->getGrade_execute())
+            throw ShrubberyCreationForm::GradeTooLowException();
         else
         {
             std::ofstream my_file(this->target+"_shrubbery");

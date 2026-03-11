@@ -34,7 +34,7 @@ RobotomyRequestForm::~RobotomyRequestForm()
 {
 }
 
-void    RobotomyRequestForm::execute(Bureaucrat const & executor) const
+void    RobotomyRequestForm::execute(Bureaucrat const & executor) 
 {
                if(!this->getSign())
                throw RobotomyRequestForm::FormNotSignedException();
