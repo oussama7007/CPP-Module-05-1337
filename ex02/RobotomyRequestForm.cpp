@@ -42,11 +42,21 @@ void    RobotomyRequestForm::execute(Bureaucrat const & executor) const
                 throw RobotomyRequestForm::GradeTooLowException();
             else 
             {
-                /*
-                    Makes some drilling noises, then informs that <target> has been robotomized
-                    successfully 50% of the time. Otherwise, it informs that the robotomy failed.
-                */
+
                std::cout << "BZZZZZZZZZZZZZZZZZZZZZZZZZZZ" << std::endl;
-               std::cout << this->target << " has been robotomized successfully 50% of the time"
-            }    
+               std::cout << "BZZZZZZZZZZZZZZZZZZZZZZZZZZZ" << std::endl;
+
+               int r = rand() % 2;
+
+               if (r == 1)
+               {
+                        std::cout << this->target << " has been robotomized successfully" << std::endl;
+               }
+               else
+               {
+                        std::cout << "Robotomy failed" << std::endl;
+               }
+
+            }
+
 }
