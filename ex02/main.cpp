@@ -14,7 +14,7 @@ int  main()
         PresidentialPardonForm form("Bob");
         Bureaucrat b("Alice", 500);
         b.signForm(form);
-        // b.executeForm(form);
+        b.executeForm(form);
     }
     catch( std::exception &e)
     {

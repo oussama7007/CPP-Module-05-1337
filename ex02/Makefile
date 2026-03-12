@@ -28,7 +28,7 @@ clean :
 	rm -rf ${obj}
 
 fclean : clean
-	rm -rf ${Nawme}
+	rm -rf ${Name}
 
 re : fclean all 
 
