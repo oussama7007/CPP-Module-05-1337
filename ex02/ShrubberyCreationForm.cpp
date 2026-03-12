@@ -41,7 +41,7 @@ void    ShrubberyCreationForm::execute(const Bureaucrat & execute)
             throw ShrubberyCreationForm::GradeTooLowException();
         else
         {
-            std::ofstream my_file(this->target+"_shrubbery");
+            std::ofstream my_file((this->target + "_shrubbery").c_str());
             my_file << "   /\\\n";
             my_file << "  /**\\\n";
             my_file << " /****\\\n";

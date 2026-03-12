@@ -28,11 +28,11 @@ Bureaucrat::~Bureaucrat() {}
 
 const char *Bureaucrat::GradeTooHighException::what() const throw()
 {
-        return "Error Grade Too High Exception";
+        return "Error Grade Too High Exception\n";
 }
 const char *Bureaucrat::GradeTooLowException::what() const throw()
 {
-        return "Error Grade Too Low Exception";
+        return "Error Grade Too Low Exception\n";
 }
 
 int        Bureaucrat::getGrade() const
@@ -76,7 +76,19 @@ void    Bureaucrat::signForm(AForm &obj) const
     }
     
 }
-
+void     Bureaucrat::executeForm(AForm const & form) const
+{
+    try
+    {
+        form.execute(*this);
+        std::cout << this->getName() << " executed " << form.getName() << std::endl;
+    }
+    catch(std::exception &e)
+    {
+        std::cout << getName() << " couldn't execute " << obj.getName() 
+                  << " because " << t.what() << std::endl;
+    }
+}
 
 std::ostream & operator<<(std::ostream &out,const  Bureaucrat &obj)
 {

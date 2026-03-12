@@ -19,6 +19,6 @@ public:
     ~RobotomyRequestForm();
 
   
-    void execute(Bureaucrat const & executor) ;
+    void execute(Bureaucrat const & executor) const ;
 };
 

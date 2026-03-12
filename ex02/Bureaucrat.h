@@ -25,10 +25,12 @@ class Bureaucrat
                 const char  *what() const throw();
         };
         std::string     getName() const;
+        
         int     getGrade()  const ;
         void    increment();   
         void    decrement();
         void    signForm(AForm &obj) const;
+        void    executeForm(AForm const & form)  const;
 };
 
 std::ostream& operator<<(std::ostream &out , const Bureaucrat& obj);

@@ -3,8 +3,9 @@
 #pragma once
 
 #include <iostream>
-
+#include <cstdlib>
 #include "Bureaucrat.h"
+
 
 class Bureaucrat;
 
@@ -43,8 +44,8 @@ class AForm
         int             getGrade_sign() const;
         int             getGrade_execute() const;
         bool            getSign() const;
-        virtual void            execute(const Bureaucrat & executor) = 0;
+        virtual void            execute(const Bureaucrat & executor) const = 0; // darori tzid const hitach Bureaucrat::executeForm(AForm const & form) 
+                                                                    //form katkhdem  gir m3a  const functions so  zedtaha flekher hna o f ga3 childs 
         void            beSigned(const Bureaucrat &obj);
 };
-
 std::ostream    &operator<<(std::ostream &out,const AForm &obj);

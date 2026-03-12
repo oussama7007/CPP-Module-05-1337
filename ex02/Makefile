@@ -1,16 +1,16 @@
 
 
 
-Name = Form
+Name = AForm
 
 SRC = Bureaucrat.cpp \
       AForm.cpp \
       PresidentialPardonForm.cpp \
       RobotomyRequestForm.cpp \
       ShrubberyCreationForm.cpp \
+	  main.cpp
 
-
-obj = ${src:.cpp=.o}
+obj = ${SRC:.cpp=.o}
 
 inc = Bureaucrat.h AForm.h ShrubberyCreationForm.h RobotomyRequestForm.h PresidentialPardonForm.h
 
@@ -28,7 +28,7 @@ clean :
 	rm -rf ${obj}
 
 fclean : clean
-	rm -rf ${Name}
+	rm -rf ${Nawme}
 
 re : fclean all 
 
