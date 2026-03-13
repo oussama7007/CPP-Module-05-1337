@@ -4,7 +4,7 @@
 int main()
 { 
     try {
-        Bureaucrat b1("Frank", 50);
+        Bureaucrat b1("Frank", 150.99);
         Bureaucrat b2(b1);
         std::cout << b2;
     }
@@ -14,7 +14,7 @@ int main()
     std::cout <<  "-----------------------------------" << std::endl;
     try 
     {
-        Bureaucrat obj( "oussama", 200);
+        Bureaucrat obj( "oussama", 150);
         for(int i = 0; i <= 16; i++)
             obj.increment();
         std::cout << obj;
