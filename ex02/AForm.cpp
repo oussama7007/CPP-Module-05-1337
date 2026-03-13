@@ -94,3 +94,5 @@ std::ostream    &operator<<(std::ostream &out,const AForm &obj)
     return out;
 }
 
+
+    
