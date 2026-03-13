@@ -93,3 +93,28 @@ std::ostream    &operator<<(std::ostream &out,const AForm &obj)
         "\nand the boolean indicating whether it is signed :" << obj.getSign() << std::endl;
     return out;
 }
+
+
+/*
+#!/bin/bash
+
+REPO="/path/to/repo"
+LOG="$REPO/autopush.log"
+
+cd "$REPO" || exit
+
+while true; do
+    echo "[$(date)] Checking..." >> "$LOG"
+
+    if [[ -n $(git status --porcelain) ]]; then
+        git add .
+        git commit -m "Auto update $(date)"
+        git push >> "$LOG" 2>&1
+        echo "[$(date)] Changes pushed" >> "$LOG"
+    else
+        echo "[$(date)] No changes" >> "$LOG"
+    fi
+
+    sleep 3600
+done
+*/
