@@ -108,5 +108,13 @@ std::ostream & operator<<(std::ostream &out,const  Bureaucrat &obj)
 
 int main()
 {
-    
+    try
+    {
+        Bureaucrat b("oussama", 13);
+        std::cout << b;
+    }
+    catch(std::exception &e)
+    {
+        
+    }
 }
