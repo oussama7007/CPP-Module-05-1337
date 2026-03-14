@@ -40,6 +40,8 @@ std::ostream& operator<<(std::ostream &out , const Bureaucrat& obj);
 
 
 
+
+
 Bureaucrat::Bureaucrat(const std::string &str, int grade): name(str), grade(grade)
 {
     if(this->grade > 150)
