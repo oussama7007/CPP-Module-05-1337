@@ -39,7 +39,6 @@ std::ostream& operator<<(std::ostream &out , const Bureaucrat& obj);
 
 
 
-#include "Bureaucrat.h"
 
 Bureaucrat::Bureaucrat(const std::string &str, int grade): name(str), grade(grade)
 {
@@ -106,15 +105,5 @@ std::ostream & operator<<(std::ostream &out,const  Bureaucrat &obj)
 }
 
 
-int main()
-{
-    try
-    {
-        Bureaucrat b("oussama", 13);
-        std::cout << b;
-    }
-    catch(std::exception &e)
-    {
-        
-    }
-}
+
+
