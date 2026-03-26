@@ -30,6 +30,7 @@ PresidentialPardonForm & PresidentialPardonForm::operator=(const PresidentialPar
 PresidentialPardonForm::~PresidentialPardonForm() 
 {}
 
+
 void    PresidentialPardonForm::execute(const Bureaucrat & executor)  const
 {
             if(!this->getSign())

@@ -5,7 +5,6 @@
 #include "RobotomyRequestForm.h"
 #include "ShrubberyCreationForm.h"
 
-
 Intern::Intern() {}
 
 Intern::~Intern() {}
@@ -20,12 +19,9 @@ Intern & Intern::operator=(const Intern &obj)
     return *this; 
 }
 
-
 AForm *createPresidential(std::string target) { return new PresidentialPardonForm(target); }
 AForm *createRobotomy(std::string target) { return new RobotomyRequestForm(target); }
 AForm *createShrubbery(std::string target) { return new ShrubberyCreationForm(target); }
-
-
 
 AForm * Intern::makeForm(std::string Formname, std::string target)
 {
