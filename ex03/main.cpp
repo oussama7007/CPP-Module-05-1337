@@ -26,10 +26,16 @@ int main()
 
     // Test 3: create, sign and execute
     std::cout << " ---------------------------------------\n";
-    Bureaucrat b("Alice", 1);
-    AForm *form3 = intern.makeForm("PresidentialPardonForm", "Bob");
-    b.signForm(*form3);
-    b.executeForm(*form3);
-    delete form3;
-
+    try 
+    {
+        Bureaucrat b("Alice", 1);
+        AForm *form3 = intern.makeForm("PresidentialPardonForm", "Bob");
+        b.signForm(*form3);
+        b.executeForm(*form3);
+        delete form3;
+    }
+    catch(std::exception &e)
+    {
+        std::cout << "Error: " << e.what() << std::endl;
+    }
 }
