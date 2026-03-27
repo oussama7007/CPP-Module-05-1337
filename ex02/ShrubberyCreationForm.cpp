@@ -47,7 +47,5 @@ void    ShrubberyCreationForm::execute(const Bureaucrat & execute) const
             my_file << " /****\\\n";
             my_file << "/******\\\n";
             my_file << "   ||\n";
-
-            // my_file.close();
         }
 }
