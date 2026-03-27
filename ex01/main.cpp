@@ -8,6 +8,7 @@ int main()
     // Test 1: valid form construction and printing
     try {
         Form f("FormB", false, 50, 25);
+        Form g("test", true, 2)
         std::cout << f;
     }
     catch (std::exception &e) {
@@ -17,7 +18,7 @@ int main()
     // Test 2: form with invalid grade at construction
     try {
         Form f("FormC", false, 0, 25);
-        std::cout << f;
+        std::cout << f ;
     }
     catch (std::exception &e) {
         std::cout<< "Error: " << e.what() << std::endl;
