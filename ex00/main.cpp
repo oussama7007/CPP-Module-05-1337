@@ -44,8 +44,7 @@ int main()
     try{
         Bureaucrat b("oussama", 200);
     }
-    catch(std::Bureaucrat::GradeTooLowException ;
- &e )
+    catch(Bureaucrat::GradeTooLowException e)
     {
         std::cout << e.what() ;
     }
