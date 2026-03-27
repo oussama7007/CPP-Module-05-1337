@@ -45,7 +45,7 @@ int main()
     }
     std::cout << " -------------------------------\n"<< std::endl;
 
-    // Test 3: ShrubberyCreationForm - check the file is created
+   
     try {
         ShrubberyCreationForm form("garden");
         Bureaucrat b("Alice", 1);
