@@ -14,6 +14,7 @@ int main()
     {
             Bureaucrat b;
             ShrubberyCreationForm tree;
+            tree.beSigned(b);
             tree.execute(b);
             printf("++++++++++++++++++++++====\n");
     }
