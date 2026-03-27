@@ -16,7 +16,7 @@ int main()
             ShrubberyCreationForm tree;
             tree.beSigned(b);
             tree.execute(b);
-   \
+   
     }
     catch(std::exception &e)
     {
