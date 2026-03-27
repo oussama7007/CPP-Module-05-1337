@@ -57,7 +57,7 @@ int main()
     }
     std::cout << " -------------------------------\n"<< std::endl;
 
-    // Test 4: RobotomyRequestForm - run multiple times to see 50%
+    
     try {
         RobotomyRequestForm form("Bender");
         Bureaucrat b("Alice", 1);
