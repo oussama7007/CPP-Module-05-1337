@@ -31,6 +31,7 @@ int main()
     catch (std::exception &e) {
         std::cout << e.what() << std::endl;
     }
+    std::cout << " -------------------------------\n"<< std::endl;
 
     // Test 2: execute without signing first
     try {
@@ -41,6 +42,7 @@ int main()
     catch (std::exception &e) {
         std::cout << e.what() << std::endl;
     }
+    std::cout << " -------------------------------\n"<< std::endl;
 
     // Test 3: ShrubberyCreationForm - check the file is created
     try {
@@ -52,6 +54,7 @@ int main()
     catch (std::exception &e) {
         std::cout << e.what() << std::endl;
     }
+    std::cout << " -------------------------------\n"<< std::endl;
 
     // Test 4: RobotomyRequestForm - run multiple times to see 50%
     try {
