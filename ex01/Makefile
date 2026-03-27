@@ -7,7 +7,7 @@ src = main.cpp Bureaucrat.cpp Form.cpp
 
 obj = ${src:.cpp=.o}
 
-cpp = c++ -Wall -Werror -Wextra -std=c++98
+cpp = c++ #-Wall -Werror -Wextra -std=c++98
 
 all : ${Name} 
 
