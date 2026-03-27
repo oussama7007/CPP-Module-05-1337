@@ -9,6 +9,12 @@
 
 int main()
 {
+
+    try
+    {
+
+    }
+    catch(std)
     // Test 1: PresidentialPardonForm - success
     try {
         PresidentialPardonForm form("Bob");
