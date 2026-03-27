@@ -9,7 +9,7 @@ int main()
     try {
         Form f("FormB", false, 50, 25);
    
-        std::cout << f << "+++++++++++++++++++++++++++++++++"<< g;
+        std::cout << f;
     }
     catch (std::exception &e) {
         std::cout << "Error "<< e.what() << std::endl;
