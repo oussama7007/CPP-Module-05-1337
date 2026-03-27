@@ -24,7 +24,6 @@ Bureaucrat & Bureaucrat::operator=(const Bureaucrat &other)
 }
 
 Bureaucrat::~Bureaucrat() {
-    std::cout << "++++++++++++++++++++++++++++++++++++++++++++=\n";
 }
 
 const char *Bureaucrat::GradeTooHighException::what() const throw()
