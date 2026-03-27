@@ -68,8 +68,5 @@ int main()
     catch (std::exception &e) {
         std::cout << e.what() << std::endl;
     }
-    
-    std::cout << " -------------------------------\n"<< std::endl;
-    PresidentialPardonForm *f = new AForm();
-    (void)f;
+
 }
