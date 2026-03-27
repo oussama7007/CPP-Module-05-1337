@@ -26,9 +26,11 @@ ${Name} : ${obj}
 
 clean :
 	rm -rf ${obj}
+	
 
 fclean : clean
 	rm -rf ${Name}
+	rm -f *_shrubbery
 
 re : fclean all 
 
