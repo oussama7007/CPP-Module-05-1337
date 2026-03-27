@@ -11,8 +11,8 @@ int main()
 
     try
     {
-            Bureaucrat b("mohamed", );
-            ShrubberyCreationForm tree;
+            Bureaucrat b("mohamed", 0);
+            ShrubberyCreationForm tree(,);
             tree.beSigned(b);
             tree.execute(b);
    
