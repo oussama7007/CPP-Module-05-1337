@@ -32,4 +32,4 @@ class Bureaucrat
         void    signForm(Form &obj) const;
 };
 
-std::ostream operator<<(std::ostream out , const Bureaucrat& obj);
+std::ostream& operator<<(std::ostream out , const Bureaucrat& obj);
