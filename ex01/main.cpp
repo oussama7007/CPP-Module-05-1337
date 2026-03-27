@@ -8,7 +8,7 @@ int main()
     // Test 1: valid form construction and printing
     try {
         Form f("FormB", false, 50, 25);
-        Form g("test", false, 2000,15);
+   
         std::cout << f << "+++++++++++++++++++++++++++++++++"<< g;
     }
     catch (std::exception &e) {
