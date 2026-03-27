@@ -6,13 +6,12 @@
 #include "ShrubberyCreationForm.h"
 
 
-
 int main()
 {
 
     try
     {
-            Bureaucrat b;
+            Bureaucrat b("mohamed", );
             ShrubberyCreationForm tree;
             tree.beSigned(b);
             tree.execute(b);
