@@ -12,12 +12,15 @@ int main()
 
     try
     {
-            
+            Bureaucrat b;
+            ShrubberyCreationForm tree;
+            tree.execute(b);
     }
     catch(std::exception &e)
     {
         std::cout << e.what() << std::endl;
     }
+    std::cout << " -------------------------------\n"<< std::endl;
     // Test 1: PresidentialPardonForm - success
     try {
         PresidentialPardonForm form("Bob");
