@@ -12,9 +12,12 @@ int main()
 
     try
     {
-
+            
     }
-    catch(std)
+    catch(std::exception &e)
+    {
+        std::cout << e.what() << std::endl;
+    }
     // Test 1: PresidentialPardonForm - success
     try {
         PresidentialPardonForm form("Bob");
